@@ -10,14 +10,15 @@ A Simple to-do list built with ReactJs
 
 ## Demo
 
-(link)
+https://to-do-1410.herokuapp.com/
 
-(img)
+<img width="604" alt="todo" src="https://user-images.githubusercontent.com/63808163/94097805-d3752380-fdec-11ea-900a-f14c43f5965b.PNG">
 
 ## Built With
 
 - ReactJs
 - Material UI
+- UUID
 - CSS
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
