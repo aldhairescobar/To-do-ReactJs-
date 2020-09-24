@@ -17,6 +17,7 @@ function EntryForm(props) {
     });
   }
 
+  /* Using uuid to get a unique ID for each todo item */
   function addClicked(e) {
     setTodo((prevValue) => {
       return {
@@ -26,6 +27,8 @@ function EntryForm(props) {
     });
     e.preventDefault();
   }
+
+  /* useEffect is waiting to the id in order to execute the function "onAdd" and add the todo item to the list array in the App.js, after that it cleans the state so the input is empty and the user can add another todo */
 
   useEffect(() => {
     props.onAdd(todo);

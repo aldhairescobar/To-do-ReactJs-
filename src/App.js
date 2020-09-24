@@ -16,9 +16,7 @@ function App() {
 
   function deleteTodo(id) {
     setList(() => {
-      return list.filter((todo) => {
-        return todo.id !== id;
-      });
+      return list.filter((todo) => todo.id !== id);
     });
   }
 
@@ -26,16 +24,14 @@ function App() {
     <div className="container">
       <Header />
       <EntryForm onAdd={addTodo} />
-      {list.map((todo) => {
-        return (
-          <TodoItem
-            key={todo.id}
-            id={todo.id}
-            text={todo.text}
-            onDelete={deleteTodo}
-          />
-        );
-      })}
+      {list.map((todo) => (
+        <TodoItem
+          key={todo.id}
+          id={todo.id}
+          text={todo.text}
+          onDelete={deleteTodo}
+        />
+      ))}
     </div>
   );
 }
