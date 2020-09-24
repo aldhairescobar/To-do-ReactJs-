@@ -4,7 +4,9 @@ A Simple to-do list built with ReactJs
 
 ## What I Learned
 
--
+- I practiced with Hooks and used "useEffect" and "useRef).
+- I used the "uuid" dependency in order to get a unique ID.
+- Conditional rendering using Material-ui in it.
 
 ## Demo
 
