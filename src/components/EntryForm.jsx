@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import uuid from "react-uuid";
 
 function EntryForm(props) {
@@ -6,6 +6,7 @@ function EntryForm(props) {
     id: "",
     text: "",
   });
+  const inputRef = useRef(null);
 
   function handleChange(e) {
     const { value } = e.target;
@@ -26,6 +27,7 @@ function EntryForm(props) {
       };
     });
     e.preventDefault();
+    inputRef.current.focus();
   }
 
   /* useEffect is waiting to the id in order to execute the function "onAdd" and add the todo item to the list array in the App.js, after that it cleans the state so the input is empty and the user can add another todo */
@@ -43,6 +45,7 @@ function EntryForm(props) {
   return (
     <form onSubmit={addClicked} className="form">
       <input
+        ref={inputRef}
         value={todo.text}
         onChange={handleChange}
         placeholder="Add a task"
